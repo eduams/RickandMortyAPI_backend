@@ -14,7 +14,6 @@ class ControladorDados extends Controller
     {
         $dados = Character::all();
         return response()->json($dados);
-        ]
     }
 
     public function salvarDados(Request $request)
@@ -66,7 +65,7 @@ class ControladorDados extends Controller
         $dados-> login = $request->input('login');
         $dados-> password = $request->input('password');
         $dados->save();
-        return response()->json(' gravado');
+        return response()->json('Cadastro bem sucedido');
     }
 
 }
